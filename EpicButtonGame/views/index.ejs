@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    
-    <title>Great Number Game</title>
+    <title>EPIC BUTTON GAME</title>
 </head>
 
 <body>
     <div class="card text-center">
         <div class="card-header">
-            Great Number Game
+            EPIC BUTTON GAME
         </div>
 
         <div class="card-body">
@@ -43,28 +43,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"> </script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script>
-      
-        var socket = io();
-        socket.on("count",function(data){
-            $(".topMessage").text(data.msg);
-        });
-
-        $("#button").click(function(){
-            socket.emit("button_push");
-            socket.on("updated_count",function(data){
-                $(".topMessage").text(data.msg)
-            });
-        });
-
-        $("#reset").click(function(){
-            socket.emit("reset");
-            socket.on("reset_count",function(data){
-                $(".topMessage").text(data.msg)
-            });
-        });
-
-    </script>
+    <script src="./js/script.js"></script>
 
 </body>
 
